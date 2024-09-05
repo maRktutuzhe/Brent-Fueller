@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity2">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:text="Подтверждение номера" />
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorDarkGray"
+            android:maxLength="6"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:hint="000000"
+            android:letterSpacing="2"
+            android:inputType="phone"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorDarkYellow" />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:text="Код отправлен на номер +79000000000" />
+        <Button
+            android:id="@+id/button_code"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/gradient_button"
+            android:fontFamily="sans-serif-medium"
+            android:text="Получить код авторизации"
+            android:textColor="@drawable/button_text"
+            android:enabled="false"
+            android:layout_marginBottom="20dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <View
+                android:layout_width="50dp"
+                android:background="@color/colorDarkYellow"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Не получили код по СМС?"
+                android:textColor="@color/colorDarkYellow"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="8dp"/>
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/colorDarkYellow"
+                />
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gradient_button"
+            android:fontFamily="sans-serif-medium"
+            android:text="Пвторить запрос"
+            android:textColor="@drawable/button_text"
+            android:layout_marginBottom="20dp"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

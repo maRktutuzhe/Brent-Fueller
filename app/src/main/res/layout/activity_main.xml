@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:text="Вход" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorDarkGray"
+            android:maxLength="10"
+            android:gravity="center"
+            android:hint="| Введите номер телефона"
+            android:inputType="phone"
+            android:textColor="@color/colorYellow"
+            android:textColorHint="@color/colorDarkYellow" />
+<!--        TODO-->
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/gradient_button"
+            android:fontFamily="sans-serif-medium"
+            android:text="Получить код авторизации"
+            android:textColor="@drawable/button_text"
+            android:enabled="false"
+            android:layout_marginBottom="20dp"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+           >
+
+        <View
+            android:layout_width="50dp"
+            android:background="@color/colorDarkYellow"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Правила"
+            android:textColor="@color/colorDarkYellow"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="8dp"/>
+        <View
+            android:layout_width="50dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/colorDarkYellow"
+            />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Продолжая авторизацию, вы согласны с условиями участия в программе лояльности Brent Fueller и даю согласие на обработку моих персональных данных на условиях, определенных в"
+        android:textColor="@drawable/rool"
+        android:buttonTint="@color/colorGreen"
+        android:layout_margin="5dp"
+        android:checked="true"
+        />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:background="@drawable/gray_button"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Политика конфиденциальности"
+                    android:textColor="@color/colorYellow"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:padding="6dp"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:background="@drawable/gray_button"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Соглашение на предоставление серв"
+                    android:textColor="@color/colorYellow"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"
+                    android:padding="6dp"
+                    />
+            </LinearLayout>
+        </HorizontalScrollView>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/gray_button"
+                android:fontFamily="sans-serif-medium"
+                android:text="Получить код авторизации"
+                android:textColor="@color/colorYellow"
+                android:layout_gravity="bottom"
+                />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
