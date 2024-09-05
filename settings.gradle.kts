@@ -9,6 +9,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven { url = uri("https://maven.yandex.ru/nexus/content/groups/public")}
     }
 }
 dependencyResolutionManagement {
@@ -16,7 +17,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-    }
+        maven { url = uri("https://maven.yandex.ru/nexus/content/groups/public")}
+        }
 }
 
 rootProject.name = "Brent Fueller"
