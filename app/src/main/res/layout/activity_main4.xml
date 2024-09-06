@@ -10,12 +10,105 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_margin="20dp">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:contentDescription="Больше информации"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/info1"
+                    android:background="@drawable/border"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/info2"
+                    android:background="@drawable/border"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/info3"
+                    android:background="@drawable/border"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/info4"
+                    android:background="@drawable/border"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:padding="2dp"
+                    android:layout_margin="2dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/info5"
+                    android:background="@drawable/border"/>
+            </LinearLayout>
+        </HorizontalScrollView>
         <com.yandex.mapkit.mapview.MapView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="550dp"
+            android:layout_weight="0"/>
 
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tabIconTint="@color/colorYellow"
+            app:tabIndicatorColor="#00FFFFFF"
+            app:tabTextColor="@color/colorYellow">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:icon="@drawable/baseline_format_list_bulleted_24"
+                android:text="Список" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:icon="@drawable/baseline_local_gas_station_24"
+                android:text="Запрвить"
+
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:icon="@drawable/baseline_local_car_wash_24"
+                android:text="Помыть"
+
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:icon="@drawable/baseline_menu_24"
+                android:text="Меню"
+
+                />
+        </com.google.android.material.tabs.TabLayout>
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

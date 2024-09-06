@@ -1,11 +1,16 @@
 package com.example.brentfueller
 
+import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.tabs.TabItem
 import com.yandex.mapkit.Animation
 import com.yandex.mapkit.MapKitFactory
 import com.yandex.mapkit.geometry.Point
@@ -28,8 +33,13 @@ class MainActivity4 : AppCompatActivity() {
             insets
         }
         val mapView: MapView = findViewById(R.id.mapView)
+        mapView.mapWindow.map.setNightModeEnabled(true);
         mapView.mapWindow.map.move(CameraPosition(Point(51.770404, 55.103080), 11.0f, 0.0f, 0.0f))
-        val imageProvider = ImageProvider.fromResource(this, R.drawable.baseline_location_on_24)
+
+        val originalBitmap = BitmapFactory.decodeResource(resources, R.drawable.location)
+        val resizedBitmap = Bitmap.createScaledBitmap(originalBitmap, 64, 64, false)
+
+        val imageProvider = ImageProvider.fromBitmap(resizedBitmap)
         val placemark1 = mapView.mapWindow.map.mapObjects.addPlacemark().apply {
             geometry = Point(51.782739, 55.083512)
             setIcon(imageProvider)
@@ -41,6 +51,12 @@ class MainActivity4 : AppCompatActivity() {
         val placemark3 = mapView.mapWindow.map.mapObjects.addPlacemark().apply {
             geometry = Point(51.811525, 55.093626)
             setIcon(imageProvider)
+        }
+
+        val intent = Intent(this, MainActivity3::class.java)
+        val menu: TabItem = findViewById(R.id.menu)
+        menu.setOnClickListener {
+            startActivity(intent)
         }
 
     }
