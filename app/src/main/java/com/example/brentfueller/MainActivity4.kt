@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.tabs.TabItem
-import com.yandex.mapkit.Animation
+import com.google.android.material.tabs.TabLayout
 import com.yandex.mapkit.MapKitFactory
 import com.yandex.mapkit.geometry.Point
 import com.yandex.mapkit.map.CameraPosition
@@ -22,7 +22,6 @@ class MainActivity4 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("MapActivity", "onCreate called")
         MapKitFactory.setApiKey("19b04bb5-0637-4beb-b0b5-1afdeda9477c")
         MapKitFactory.initialize(this)
         enableEdgeToEdge()
@@ -32,6 +31,12 @@ class MainActivity4 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val intent = Intent(this, MainActivity3::class.java)
+        val menu: Button = findViewById(R.id.menu)
+        menu.setOnClickListener {
+            startActivity(intent)
+        }
+
         val mapView: MapView = findViewById(R.id.mapView)
         mapView.mapWindow.map.setNightModeEnabled(true);
         mapView.mapWindow.map.move(CameraPosition(Point(51.770404, 55.103080), 11.0f, 0.0f, 0.0f))
@@ -52,20 +57,13 @@ class MainActivity4 : AppCompatActivity() {
             geometry = Point(51.811525, 55.093626)
             setIcon(imageProvider)
         }
-
-        val intent = Intent(this, MainActivity3::class.java)
-        val menu: TabItem = findViewById(R.id.menu)
-        menu.setOnClickListener {
-            startActivity(intent)
-        }
-
     }
+
     override fun onStart() {
         super.onStart()
         MapKitFactory.getInstance().onStart()
         val mapView: MapView = findViewById(R.id.mapView)
         mapView.onStart()
-        Log.d("MapActivity", "onStart called")
     }
 
     override fun onStop() {
@@ -73,6 +71,5 @@ class MainActivity4 : AppCompatActivity() {
         mapView.onStop()
         MapKitFactory.getInstance().onStop()
         super.onStop()
-        Log.d("MapActivity", "onStop called")
     }
 }

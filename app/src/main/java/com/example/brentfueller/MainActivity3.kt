@@ -3,6 +3,7 @@ package com.example.brentfueller
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,6 +20,10 @@ class MainActivity3 : AppCompatActivity() {
             insets
         }
         val intent = Intent(this, MainActivity4::class.java)
+        val close:ImageView = findViewById(R.id.close)
+        close.setOnClickListener {
+            startActivity(intent)
+        }
         val button:Button = findViewById(R.id.next)
             button.setOnClickListener {
                 startActivity(intent)

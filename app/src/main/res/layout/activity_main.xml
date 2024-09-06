@@ -31,20 +31,40 @@
             android:textSize="20sp"
             android:layout_marginBottom="10dp"
             android:text="Вход" />
-
-        <EditText
-            android:id="@+id/phone"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center|center_vertical"
             android:background="@color/colorDarkGray"
-            android:maxLength="10"
-            android:gravity="center"
-            android:hint="| Введите номер телефона"
-            android:inputType="phone"
-            android:textColor="@color/colorYellow"
-            android:textColorHint="@color/colorDarkYellow" />
-<!--        TODO-->
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/rus"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+7"
+                android:textColor="@color/colorYellow"
+                android:textSize="18sp"
+                android:layout_margin="5dp"/>
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorDarkGray"
+                android:maxLength="10"
+                android:layout_margin="5dp"
+                android:gravity="center_vertical"
+                android:hint="| Введите номер телефона"
+                android:inputType="phone"
+                android:textColor="@color/colorYellow"
+                android:textColorHint="@color/colorDarkYellow" />
+        </LinearLayout>
         <Button
             android:id="@+id/button_login"
             android:layout_width="match_parent"
@@ -56,14 +76,12 @@
             android:enabled="false"
             android:layout_marginBottom="20dp"
              />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
            >
-
         <View
             android:layout_width="50dp"
             android:background="@color/colorDarkYellow"
@@ -83,9 +101,7 @@
             android:layout_weight="1"
             android:background="@color/colorDarkYellow"
             />
-
     </LinearLayout>
-
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="match_parent"
@@ -139,7 +155,9 @@
                 android:layout_height="48dp"
                 android:background="@drawable/gray_button"
                 android:fontFamily="sans-serif-medium"
-                android:text="Получить код авторизации"
+                android:text="Найти запрвку"
+                android:drawableLeft="@drawable/baseline_location_on_24"
+                android:paddingLeft="20dp"
                 android:textColor="@color/colorYellow"
                 android:layout_gravity="bottom"
                 />

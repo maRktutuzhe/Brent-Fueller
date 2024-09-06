@@ -1,6 +1,8 @@
 package com.example.brentfueller
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -11,6 +13,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.yandex.runtime.image.ImageProvider
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,10 +33,11 @@ class MainActivity : AppCompatActivity() {
         val checkBoxRools: CheckBox = findViewById(R.id.checkBox)
         val intent = Intent(this, MainActivity2::class.java)
 
+
+
         button.setOnClickListener {
             val phone = userPhone.text.toString().trim()
             if(phone == "9000000000") {
-                Toast.makeText(this, "Отлично", Toast.LENGTH_LONG).show()
                 startActivity(intent)
             }
             else {

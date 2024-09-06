@@ -26,7 +26,7 @@ class MainActivity2 : AppCompatActivity() {
         val userCode: EditText = findViewById(R.id.code)
         val button: Button = findViewById(R.id.button_code)
 
-        val intent = Intent(this, MainActivity3::class.java)
+        val intent = Intent(this, MainActivity4::class.java)
 
         button.setOnClickListener {
             startActivity(intent)
@@ -36,7 +36,7 @@ class MainActivity2 : AppCompatActivity() {
             val code = userCode.text.toString().trim()
             if(code.length == 6) {
                 button.isEnabled = (code == "123456")
-            }
+            } else button.isEnabled = false
             false
         })
     }
