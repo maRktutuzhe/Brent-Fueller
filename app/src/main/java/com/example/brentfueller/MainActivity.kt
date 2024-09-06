@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             val phone = userPhone.text.toString().trim()
             if(phone.length == 10) {
                 button.isEnabled = checkBoxRools.isChecked
-            }
+            } else button.isEnabled = false
             false
         })
 
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             if(checkBoxRools.isChecked) {
                 val phone = userPhone.text.toString().trim()
                 button.isEnabled = phone.length == 10
-            }
+            } else button.isEnabled = false
         }
     }
 }

@@ -90,7 +90,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/gradient_button"
             android:fontFamily="sans-serif-medium"
-            android:text="Пвторить запрос"
+            android:text="Повторить запрос"
             android:textColor="@drawable/button_text"
             android:layout_marginBottom="20dp"
             />
